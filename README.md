@@ -10,41 +10,42 @@ AmericanoScript Syntax is an ES6 shorthand, with these features:
 * [ ] Literate (markdown document, with parsed code blocks.)
 * [ ] Array slice/splice (`foo.bar[i..j]`, `foo.bar[m...n] = []`)
 * [ ] Block Regex `/// ... ///` with whitespace.
+* [ ] Drop parens around control structures (`if`, `for`, `while`, `switch`)
 
 Targets - while not targeting these languages specifically, using the features should "Just Work".
 
 * [ ] AtScript
 
-    ```
-        @Component()
-        class MyApp
-          server:Server
-          @Bind('name') name:string
-          @Event('foo') fooFn:Function
+    ```javascript
+    @Component()
+    class MyApp
+      server:Server
+      @Bind('name') name:string
+      @Event('foo') fooFn:Function
 
-          @Inject()
-          constructor(@parent server:Server) {}
-          greet():string {}
+      @Inject()
+      constructor(@parent server:Server) {}
+      greet():string {}
     ```
 
     Compiles to
 
-        ```
-        @Component()
-        class MyApp {
-          server:Server;
-          @Bind('name') name:string;
-          @Event('foo') fooFn:Function;
+    ```javascript
+    @Component()
+    class MyApp {
+      server:Server;
+      @Bind('name') name:string;
+      @Event('foo') fooFn:Function;
 
-          @Inject()
-          constructor(@parent server:Server) {}
-          greet():string {}
-        }
-        ```
+      @Inject()
+      constructor(@parent server:Server) {}
+      greet():string {}
+    }
+    ```
 
 * [ ] TypeScript
 
-    ```
+    ```typescript
     class Greeter
         constructor(public greeting: string) { }
         greet()
@@ -57,7 +58,7 @@ Targets - while not targeting these languages specifically, using the features s
 
     Compiles to
 
-    ```
+    ```typescript
     class Greeter {
         constructor(public greeting: string) { }
         greet() {
@@ -72,7 +73,7 @@ Targets - while not targeting these languages specifically, using the features s
 
 * [ ] ES5
 
-    ```
+    ```javascript
     var Path = require('path')
     module.exports = function bootstrapConfig(config)
         config.vendors = config.vendors or {}
@@ -93,7 +94,7 @@ Targets - while not targeting these languages specifically, using the features s
 
     compiles to
 
-    ```
+    ```javascript
     var Path = require('path');
     module.exports = function bootstrapConfig(config){
         config.vendors = config.vendors || {}
