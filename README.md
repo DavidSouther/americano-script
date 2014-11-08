@@ -95,8 +95,8 @@ Targets - while not targeting these languages specifically, using the features s
     compiles to
 
     ```javascript
-    var Path = require('path');
-    module.exports = function bootstrapConfig(config){
+    var Path = require('path')
+    module.exports = function bootstrapConfig(config) {
         config.vendors = config.vendors || {}
         config.vendors.prefix = config.vendors.prefix || []
         config.vendors.prefix.push(Path.resolve(__dirname, '../node_modules'))
