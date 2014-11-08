@@ -1,0 +1,21 @@
+{
+  "name": "americanoscript",
+  "version": "0.0.0",
+  "description": "ESLight compiler.",
+  "main": "lib/americano.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require should"
+  },
+  "keywords": [
+    "es5",
+    "es6",
+    "transpiler",
+    "americano"
+  ],
+  "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.2.1"
+  }
+}
