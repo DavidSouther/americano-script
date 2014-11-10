@@ -4,7 +4,7 @@
   "description": "ESLight compiler.",
   "main": "lib/americano.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require should"
+    "test": "./node_modules/.bin/mocha --require should --compilers acs:./lib/register"
   },
   "keywords": [
     "es5",
