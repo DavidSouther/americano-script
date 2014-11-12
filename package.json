@@ -1,10 +1,14 @@
 {
-  "name": "americanoscript",
+  "name": "americano-script",
   "version": "0.0.0",
   "description": "ESLight compiler.",
   "main": "lib/americano.js",
+  "repository": "git@github.com:DavidSouther/americano-script.git",
   "scripts": {
     "test": "./node_modules/.bin/mocha --require should --compilers acs:./lib/register"
+  },
+  "directories": {
+    "lib": "./lib",
   },
   "keywords": [
     "es5",
