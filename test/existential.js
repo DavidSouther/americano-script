@@ -9,7 +9,7 @@ describe('Existential operator', function(){
 
     it('expands several correctly', function(){
         compiler.compile("if foo.bar?.baz?.foo?").should.equal(
-            "if (((_ref0 = foo.bar) != null ? (_ref1 = _ref0.baz) != null ? _ref1.foo : void 0 : void 0) != null) ;"
+            "var _ref0, _ref1, _ref2;\nif ( (_ref0 = foo.bar) != null ? (_ref1 = _ref0.baz) != null ? (_ref2 = _ref1.foo) != null ? _ref2 : void 0 : void 0 : void 0 )\n"
         )
     })
 });
