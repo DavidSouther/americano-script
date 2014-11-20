@@ -7,8 +7,10 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha --require should --compilers acs:./lib/register"
   },
+  "bin": "./bin/americano.js",
   "directories": {
     "lib": "./lib",
+    "bin": "./bin"
   },
   "keywords": [
     "es5",
