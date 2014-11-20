@@ -5,13 +5,13 @@ AmericanoScript Syntax is an ES6 shorthand, with these features:
 * [X] Indent/Dedent  to control blocks (Python, Coffeescript)
 * [X] CS Aliases (`and`, `or`, `is`)
 * [X] No Semicolons (Insert a semicolon at end of every non-ambiguous line)
-* [x] Existential Operator (`foo.bar?.baz?`)
-* [ ] Heredocs `"""`, #{} for interpolation.
-* [ ] Literate (markdown document, with parsed code blocks.)
+* [X] Heredocs `"""`, `#{}` for interpolation.
+* [X] Block Regex `/// ... ///` with whitespace.
+* [X] Drop parens around control structures (`if`, `for`, `while`, `switch`)
+* [X] Existential Operator (`foo.bar?.baz?`)
 * [ ] Array slice/splice (`foo.bar[i..j]`, `foo.bar[m...n] = []`)
-* [ ] Block Regex `/// ... ///` with whitespace.
-* [x] Drop parens around control structures (`if`, `for`, `while`, `switch`)
 * [ ] Drop parens around callbacks.
+* [ ] Literate (markdown document, with parsed code blocks.)(Might get dropped.)
 
 Targets - while not targeting these languages specifically, using the features should "Just Work".
 
