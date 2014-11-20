@@ -7,11 +7,11 @@ var source =
     "   | ([&|<>])\2=?      // logic / shift\n" +
     "   | \?\.              // soak access\n" +
     "   | \.{2,3}           // range or splat\n" +
-    "   | #{foo}            // Variable Interpolation" +
-    "   | 'literal'         // literal with quotes" +
-    ") ///\n" ;
+    "   | #{foo}            // Variable Interpolation\n" +
+    "   | 'literal'         // literal with quotes\n" +
+    ") ///ig\n" ; // Flags
 
-var expected = "OPERATOR = new RegExp('^(?:[-=]>|[-+*\/%<>&|^!?=]=|>>>=?|([-+:])\1|([&|<>])\2=?|\?\.|\.{2,3}|' + foo + '|\\'literal\\')');\n";
+var expected = "OPERATOR = new RegExp('^(?:[-=]>|[-+*\/%<>&|^!?=]=|>>>=?|([-+:])\1|([&|<>])\2=?|\?\.|\.{2,3}|' + (foo) + '|\\'literal\\')', 'ig');\n";
 
 var compiler = require('../lib/americano');
 
