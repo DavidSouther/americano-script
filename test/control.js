@@ -3,7 +3,7 @@ var source =
     "  camel()"
 
 var expected =
-    "if (foo === bar) {\n" +
+    "if ( foo === bar ) {\n" +
     "  camel()\n" +
     "}\n"
 
