@@ -2,12 +2,14 @@ var compiler = require('../lib/americano');
 
 describe('Splices', function(){
     var cases = {
-        "foo.bar[i .. ]": "foo.bar.slice(i);\n",
-        "foo.bar[ i .. j ]": "foo.bar.slice(i, +j + 1 || 9e9);\n",
-        "foo.bar[m...n] = []": "[].splice.apply(foo.bar, [m, n - m].concat(_ref = [])), _ref;\n",
-        "foo.bar[m ... n][i..j] = []": "[].splice.apply(foo.bar.slice(m, n), [i, j - i + 1].concat(_ref1 = [])), _ref1;\n",
-        "[a...b]": "(function() { var _results = []; for (var _i = a; a <= b ? _i < b : _i > b; a <= b ? _i++ : _i--){ _results.push(_i); } return _results; }).apply(this);\n",
-        "[a..b]": "(function() { var _results = []; for (var _j = a; a <= b ? _j <= b : _j >= b; a <= b ? _j++ : _j--){ _results1.push(_j); } return _results1; }).apply(this);\n",
+        "foo.bar[i .. ]": "foo.bar.slice(i)\n",
+        "foo.bar[ i ... j ]": "foo.bar.slice(i, j)\n",
+        "foo.bar[ i .. j ]": "foo.bar.slice(i, +j + 1 || 9e9)\n",
+        "foo.bar[m...n] = []": "foo.bar.splice(m, n - m, [])\n",
+        "foo.bar[m ... n][i..j] = []": "foo.bar.slice(m, n).splice(i, j - i + 1, [])\n",
+        "[a...b]": "(function() { var _ = []; for (var i = a; a <= b ? i < b : i > b; a <= b ? i+=1 : i-=1){ _.push(i); } return _; }())\n",
+        "[a..b]":  "(function() { var _ = []; for (var i = a; a <= b ? i <= b : i >= b; a <= b ? i+=1 : i-=1){ _.push(i); } return _; }())\n",
+        "[a..b, -2]": "(function() { var _ = []; for (var i = a; -2 > 0 ? i <= b : i >= b; a <= b ? i+=2 : i-=2){ _.push(i); } return _; }())\n",
     };
 
     it('slices and splices and dices', function(){
