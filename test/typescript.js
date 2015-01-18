@@ -11,12 +11,12 @@ var expected =
     "class Greeter {\n" +
     "    constructor(public greeting: string) { }\n" +
     "    greet() {\n" +
-    "        return \"<h1>\" + this.greeting + \"</h1>\";\n" +
+    "        return \"<h1>\" + this.greeting + \"</h1>\"\n" +
     "    }\n" +
     "}\n" +
     "var greeter = new Greeter(\"Hello, world!\")\n" +
     "var str = greeter.greet()\n" +
-    "document.body.innerHTML = str;\n"
+    "document.body.innerHTML = str\n"
 
 var compiler = require('../lib/americano');
 

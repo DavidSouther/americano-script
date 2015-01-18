@@ -10,6 +10,6 @@ describe('Grammar', function(){
     var tokens = tokenizer.tokenize(source);
     var tree = grammar.parse(tokens);
 
-    tree.toCode().should.eql("var foo = 'bars'\nfunction FooBar() {\n return foo + bar\n}\nvar jkl = -123.65\n");
+    tree.toCode().should.eql("var foo = 'bars'\nfunction FooBar() {\n  return foo + bar\n}\nvar jkl = -123.65\n");
   });
 });

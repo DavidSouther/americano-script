@@ -15,7 +15,7 @@ describe('Tokenizer', function(){
       'SPACE(1, CLEAN)@1:7',
       'UKN(=)@1:8',
       'SPACE(1, CLEAN)@1:9',
-      'COMMA()@1:10',
+      'STRING(\'bars\')@1:10',
       'UKN(;)@1:16',
       'NL()@1:17',
       'IDENT(function)@2:0',

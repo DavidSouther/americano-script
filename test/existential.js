@@ -15,7 +15,7 @@ describe('Existential operator', function(){
 
     it('does not expand ? in string or regex', function(){
         compiler.compile("var foo = 'To be? or not to be?'\n").should.equal(
-            "var foo = 'To be? or not to be?';\n"
+            "var foo = 'To be? or not to be?'\n"
         );
     })
 });
