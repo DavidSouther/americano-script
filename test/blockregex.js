@@ -15,7 +15,7 @@ var expected = "OPERATOR = new RegExp('^(?:[-=]>|[-+*\/%<>&|^!?=]=|>>>=?|([-+:])
 
 var compiler = require('../lib/americano');
 
-describe.skip('Block Regex', function(){
+describe('Block Regex', function(){
     it('compiles sanely', function(){
         compiler.compile(source).should.equal(expected);
     });
