@@ -1,17 +1,6 @@
-source =
-'fn* gen(i)\n' +
-'  while true\n' +
-'    yield i++\n'+
-'    yield* anotherGen(i)\n'
-;
-expected =
-'function* gen(i) {\n' +
-'  while ( true ) {\n' +
-'    yield i++;\n' +
-'    yield* anotherGen(i);\n' +
-'  }\n' +
-'}\n'
-;
+var source = "/*\n * Comment\n*/\nfn(foo)\n  return foo + foo\n";
+
+var expected = "/*\n * Comment\n*/\nfunction(foo) {\n  return foo + foo;\n}\n";
 
 var compiler = require('./lib/americano');
 debugger
