@@ -1,10 +1,10 @@
 var source =
     "if foo is bar\n" +
-    "  camel()"
+    "  camel()\n"
 
 var expected =
-    "if ( foo === bar ) {\n" +
-    "  camel()\n" +
+    "if (foo === bar) {\n" +
+    "  camel();\n" +
     "}\n"
 
 var compiler = require('../lib/americano');

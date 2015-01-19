@@ -20,7 +20,7 @@ describe('Aliases', function(){
             ;
         expected =
             'function* gen(i) {\n' +
-            '  while ( true ) {\n' +
+            '  while (true) {\n' +
             '    yield i++;\n' +
             '    yield* anotherGen(i);\n' +
             '  }\n' +
