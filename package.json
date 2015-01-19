@@ -5,7 +5,7 @@
   "main": "lib/americano.js",
   "repository": "git@github.com:DavidSouther/americano-script.git",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require should --compilers acs:./lib/register"
+    "test": "./node_modules/.bin/mocha --recursive --require should --compilers acs:./lib/register"
   },
   "bin": "./bin/americano.js",
   "directories": {

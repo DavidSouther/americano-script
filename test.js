@@ -1,10 +1,17 @@
-var source =
-"Subclass:: = Object.create(Superclass::)\n" +
-"Array::map.call(arrayLike, func)\n" ;
-
-var expected =
-"Subclass.prototype = Object.create(Superclass.prototype);\n" +
-"Array.prototype.map.call(arrayLike, func);\n";
+source =
+'fn* gen(i)\n' +
+'  while true\n' +
+'    yield i++\n'+
+'    yield* anotherGen(i)\n'
+;
+expected =
+'function* gen(i) {\n' +
+'  while ( true ) {\n' +
+'    yield i++;\n' +
+'    yield* anotherGen(i);\n' +
+'  }\n' +
+'}\n'
+;
 
 var compiler = require('./lib/americano');
 debugger
