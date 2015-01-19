@@ -3,8 +3,8 @@ var source =
     "Array::map.call(arrayLike, func)\n" ;
 
 var expected =
-    "Subclass.prototype = Object.create(Superclass.prototype)\n" +
-    "Array.prototype.map.call(arrayLike, func)\n" ;
+    "Subclass.prototype = Object.create(Superclass.prototype);\n" +
+    "Array.prototype.map.call(arrayLike, func);\n" ;
 
 var compiler = require('../lib/americano');
 

@@ -10,13 +10,13 @@ var source =
     "  greet():string {}\n";
 
 var expected =
-    "@Component()\n" +
+    "@Component();\n" +
     "class MyApp {\n" +
     "  server:Server;\n" +
     "  @Bind('name') name:string;\n" +
     "  @Event('foo') fooFn:Function;\n" +
     "\n" +
-    "  @Inject()\n" +
+    "  @Inject();\n" +
     "  constructor(@parent server:Server) {}\n" +
     "  greet():string {}\n" +
     "}\n";

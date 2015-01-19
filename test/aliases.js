@@ -2,7 +2,7 @@ var source =
     "if ((a or b) and (c is d)) 3\n";
 
 var expected =
-    "if ( ((a || b) && (c === d)) 3 )\n";
+    "if ( ((a || b) && (c === d)) 3 );\n";
 
 var compiler = require('../lib/americano');
 
@@ -21,8 +21,8 @@ describe('Aliases', function(){
         expected =
             'function* gen(i) {\n' +
             '  while ( true ) {\n' +
-            '    yield i++\n' +
-            '    yield* anotherGen(i)\n' +
+            '    yield i++;\n' +
+            '    yield* anotherGen(i);\n' +
             '  }\n' +
             '}\n'
             ;
